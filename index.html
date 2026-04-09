@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Czech Map Game</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-sA+vG3Ygt5EHC0NEXGj3j5t0i7cj0Q2lXuM2+y+P9AU=" crossorigin="" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page-shell">
+    <section class="panel top-panel">
+      <div class="brand">
+        <h1>Czech Map Game</h1>
+        <p>Seterra-like klikací kvíz českých správních jednotek.</p>
+      </div>
+
+      <div class="controls">
+        <div class="control-row">
+          <label for="levelSelect">Úroveň</label>
+          <select id="levelSelect">
+            <option value="kraje">Kraje</option>
+            <option value="okresy">Okresy</option>
+            <option value="orp">ORP</option>
+          </select>
+        </div>
+
+        <div class="control-row">
+          <label for="scopeSelect">Rozsah</label>
+          <select id="scopeSelect">
+            <option value="czech">Celá ČR</option>
+            <option value="oneKraj">Jeden kraj</option>
+            <option value="oneOkres">Jeden okres</option>
+          </select>
+        </div>
+
+        <div class="control-row dependent" id="krajRow">
+          <label for="krajSelect">Vyber kraj</label>
+          <select id="krajSelect">
+            <option value="">Vyberte kraj</option>
+          </select>
+        </div>
+
+        <div class="control-row dependent" id="okresRow">
+          <label for="okresSelect">Vyber okres</label>
+          <select id="okresSelect">
+            <option value="">Vyberte okres</option>
+          </select>
+        </div>
+
+        <div class="button-row">
+          <button id="newGameButton">Nová hra</button>
+          <button id="nextButton" disabled>Další</button>
+          <button id="resetButton">Reset</button>
+        </div>
+
+        <div class="info-panel">
+          <p id="targetText">Cíl: –</p>
+          <p id="progressText">Progres: 0 / 0</p>
+          <p id="attemptsText">Pokusy: –</p>
+          <p id="feedbackText">Vyberte možnosti a spusťte hru.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel map-panel">
+      <div id="map">Načítání mapy…</div>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-oY3pfv7K8fRZbUGmjY2cXKQpiI/ZB+6nxbtKEVhNPbw=" crossorigin=""></script>
+  <script src="app.js"></script>
+</body>
+</html>
