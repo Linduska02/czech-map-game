@@ -5,7 +5,11 @@ const CONFIG = {
     okresy: './data/Okresy_LAU_1_multi_20260101.geojson',
     orp: './data/CZ_ORP_Enriched.geojson'
   },
-  maxAttempts: 3
+  maxAttempts: 3,
+  defaultView: {
+    center: [49.8, 15.5],
+    zoom: 7
+  }
 };
 
 const ui = {
@@ -36,6 +40,7 @@ const state = {
     okresy: [],
     orp: []
   },
+  layerByTargetId: {},
   currentLevel: 'kraje',
   currentScope: 'czech',
   selectedKraj: '',
@@ -76,13 +81,17 @@ function createFeatureKey(type, code) {
 function showFeedback(message, type = 'default') {
   if (!ui.feedbackText) return;
   ui.feedbackText.textContent = message;
-  ui.feedbackText.style.color = type === 'error' ? '#b91c1c' : type === 'success' ? '#047857' : '';
+  ui.feedbackText.style.color =
+    type === 'error' ? '#b91c1c'
+      : type === 'success' ? '#047857'
+        : '';
 }
 
 function updateInfo() {
   const total = state.pool.length;
   const done = state.completedIds.size;
   ui.progressText.textContent = `Progres: ${done} / ${total}`;
+
   if (state.currentTarget) {
     ui.targetText.textContent = `Cíl: ${state.currentTarget.name}`;
     ui.attemptsText.textContent = `Pokusy: ${state.attemptsLeft} / ${CONFIG.maxAttempts}`;
@@ -111,8 +120,6 @@ function getArrayField(source, keys) {
 }
 
 function loadHierarchy(hierarchyJson) {
-  const kraje = getArrayField(hierarchyJson, ['kraje', 'Kraje', 'state']) || [];
-
   const normalizedKraje = Array.isArray(hierarchyJson.kraje)
     ? hierarchyJson.kraje
     : Array.isArray(hierarchyJson.state)
@@ -125,14 +132,12 @@ function loadHierarchy(hierarchyJson) {
 
   state.hierarchy = normalizedKraje.map((kraj) => {
     const okresy = getArrayField(kraj, ['okresy', 'Okresy']);
-    const normalizedOkresy = okresy.map((okres) => ({
-      ...okres,
-      okresy: undefined,
-      orp: getArrayField(okres, ['orp', 'ORP', 'orpList'])
-    }));
     return {
       ...kraj,
-      okresy: normalizedOkresy
+      okresy: okresy.map((okres) => ({
+        ...okres,
+        orp: getArrayField(okres, ['orp', 'ORP', 'orpList'])
+      }))
     };
   });
 }
@@ -157,6 +162,7 @@ function buildTargetLists() {
     okresy.forEach((okres) => {
       const okresCode = normalizeCode(okres.kod_okres || okres.lau1);
       const okresName = okres.naz_okres || okres.nazev || 'Neznámý okres';
+
       state.targets.okresy.push({
         id: createFeatureKey('okresy', okresCode),
         type: 'okresy',
@@ -172,6 +178,7 @@ function buildTargetLists() {
       orpCandidates.forEach((orp) => {
         const orpCode = normalizeCode(orp.kod_orp || orp.kod_ORP);
         const orpName = orp.naz_orp || orp.nazev || 'Neznámý ORP';
+
         state.targets.orp.push({
           id: createFeatureKey('orp', orpCode),
           type: 'orp',
@@ -189,9 +196,11 @@ function buildTargetLists() {
 
 function loadGeoJsonFeatures(type, featureCollection) {
   const features = Array.isArray(featureCollection.features) ? featureCollection.features : [];
+
   features.forEach((feature) => {
     const props = feature.properties || {};
     let code = '';
+
     if (type === 'kraje') {
       code = normalizeCode(props.kod_kraj || props.kod || props.NUTS3_KRAJ || props.nuts3_kraj);
     } else if (type === 'okresy') {
@@ -199,6 +208,7 @@ function loadGeoJsonFeatures(type, featureCollection) {
     } else if (type === 'orp') {
       code = normalizeCode(props.kod_orp || props.kod_ORP || props.orp);
     }
+
     if (code) {
       state.geoFeatures[type][code] = feature;
     }
@@ -206,15 +216,14 @@ function loadGeoJsonFeatures(type, featureCollection) {
 }
 
 function getTargetFeature(type, target) {
-  if (!target || !target.code) {
-    return null;
-  }
+  if (!target || !target.code) return null;
   return state.geoFeatures[type]?.[target.code] || null;
 }
 
 function updateScopeAndLevelOptions() {
   const scope = ui.scopeSelect.value;
   state.currentScope = scope;
+
   const allowed = scopeRules[scope]?.levels || [];
   ui.levelSelect.querySelectorAll('option').forEach((option) => {
     option.disabled = !allowed.includes(option.value);
@@ -225,8 +234,10 @@ function updateScopeAndLevelOptions() {
   }
 
   state.currentLevel = ui.levelSelect.value;
+
   ui.krajRow.style.display = scope === 'oneKraj' || scope === 'oneOkres' ? 'grid' : 'none';
   ui.okresRow.style.display = scope === 'oneOkres' ? 'grid' : 'none';
+
   if (scope !== 'oneOkres') {
     state.selectedOkres = '';
     ui.okresSelect.value = '';
@@ -243,29 +254,35 @@ function updateScopeAndLevelOptions() {
 
 function updateKrajOptions() {
   if (!ui.krajSelect) return;
+
   const options = ['<option value="">Vyberte kraj</option>'];
   state.targets.kraje.forEach((kraj) => {
     const selected = kraj.code === state.selectedKraj ? ' selected' : '';
     options.push(`<option value="${kraj.code}"${selected}>${kraj.name}</option>`);
   });
+
   ui.krajSelect.innerHTML = options.join('');
 }
 
 function updateOkresOptions() {
   if (!ui.okresSelect) return;
+
   const krajCode = ui.krajSelect.value;
   const okresy = state.targets.okresy.filter((okres) => okres.kod_kraj === krajCode);
+
   const options = ['<option value="">Vyberte okres</option>'];
   okresy.forEach((okres) => {
     const selected = okres.code === state.selectedOkres ? ' selected' : '';
     options.push(`<option value="${okres.code}"${selected}>${okres.name}</option>`);
   });
+
   ui.okresSelect.innerHTML = options.join('');
 }
 
 function getFilteredTargets() {
   const level = state.currentLevel;
   const scope = state.currentScope;
+
   if (level === 'kraje' && scope === 'czech') {
     return [...state.targets.kraje];
   }
@@ -299,28 +316,29 @@ function clearMapLayers() {
     state.activeLayerGroup.remove();
     state.activeLayerGroup = null;
   }
+
   if (state.contextLayerGroup) {
     state.contextLayerGroup.remove();
     state.contextLayerGroup = null;
   }
+
+  state.layerByTargetId = {};
 }
 
 function clearSelectionStyles(layer) {
   if (!layer || !layer.feature) return;
-  const type = state.currentLevel;
-  layer.setStyle(styles[type]);
+  layer.setStyle(styles[state.currentLevel]);
 }
 
 function createFeatureLayer(target) {
   const feature = getTargetFeature(target.type, target);
-  if (!feature) {
-    return null;
-  }
+  if (!feature) return null;
 
   return L.geoJSON(feature, {
     style: () => styles[target.type],
-    onEachFeature: (feature, layer) => {
+    onEachFeature: (_feature, layer) => {
       layer.targetId = target.id;
+      state.layerByTargetId[target.id] = layer;
       layer.on('click', () => handleMapClick(target, layer));
     }
   });
@@ -328,31 +346,42 @@ function createFeatureLayer(target) {
 
 function renderContextLayers() {
   const type = state.currentLevel;
-  if (type === 'orp' || type === 'okresy') {
-    const group = L.layerGroup();
-    Object.values(state.geoFeatures.kraje).forEach((feature) => {
-      L.geoJSON(feature, {
-        style: styles.context,
-        interactive: false
-      }).addTo(group);
-    });
-    group.addTo(state.map);
-    state.contextLayerGroup = group;
-  }
+  if (type !== 'orp' && type !== 'okresy') return;
+
+  const group = L.layerGroup();
+
+  Object.values(state.geoFeatures.kraje).forEach((feature) => {
+    L.geoJSON(feature, {
+      style: styles.context,
+      interactive: false
+    }).addTo(group);
+  });
+
+  group.addTo(state.map);
+  state.contextLayerGroup = group;
 }
 
 function renderMap() {
   clearMapLayers();
-  const pool = getFilteredTargets();
+
+  const pool = getFilteredTargets().filter((target) => {
+    const hasFeature = !!getTargetFeature(target.type, target);
+    if (!hasFeature) {
+      console.warn('Missing geometry for target:', target);
+    }
+    return hasFeature;
+  });
+
   if (!pool.length) {
     showFeedback('Vyberte platnou kombinaci rozsahu a úrovně.', 'error');
     if (state.map) {
-      state.map.setView([49.8, 15.5], 7);
+      state.map.setView(CONFIG.defaultView.center, CONFIG.defaultView.zoom);
     }
     return;
   }
 
-  const group = L.layerGroup();
+  const group = L.featureGroup();
+
   pool.forEach((target) => {
     const layer = createFeatureLayer(target);
     if (layer) {
@@ -362,10 +391,12 @@ function renderMap() {
 
   group.addTo(state.map);
   state.activeLayerGroup = group;
+
   renderContextLayers();
 
-  if (group.getBounds().isValid()) {
-    state.map.fitBounds(group.getBounds(), { padding: [20, 20] });
+  const bounds = group.getBounds();
+  if (bounds.isValid()) {
+    state.map.fitBounds(bounds, { padding: [20, 20] });
   }
 }
 
@@ -376,32 +407,49 @@ function setTargetStatus(message, type = 'default') {
 
 function chooseNextTarget() {
   const remaining = state.pool.filter((item) => !state.completedIds.has(item.id));
+
   if (!remaining.length) {
     state.currentTarget = null;
     ui.nextButton.disabled = true;
-    setTargetStatus('Gratulace! Cílvevšny dokončeny.', 'success');
+    setTargetStatus('Gratulace! Všechny cíle jsou dokončeny.', 'success');
     return;
   }
+
   const index = Math.floor(Math.random() * remaining.length);
   state.currentTarget = remaining[index];
   state.attemptsLeft = CONFIG.maxAttempts;
   state.answered = false;
   ui.nextButton.disabled = true;
+
   setTargetStatus('Klikněte na správný polygon na mapě.');
 }
 
 function startNewGame() {
-  const filtered = getFilteredTargets();
+  const filtered = getFilteredTargets().filter((target) => getTargetFeature(target.type, target));
+
   if (!filtered.length) {
     setTargetStatus('Pro tuto kombinaci nelze spustit novou hru.', 'error');
     return;
   }
+
   state.pool = filtered;
   state.completedIds.clear();
   state.currentTarget = null;
   state.answered = false;
+
   renderMap();
   chooseNextTarget();
+  updateInfo();
+}
+
+function invalidateCurrentGame(message = 'Nastavení změněno. Spusťte novou hru.') {
+  state.pool = [];
+  state.completedIds.clear();
+  state.currentTarget = null;
+  state.answered = false;
+  state.attemptsLeft = CONFIG.maxAttempts;
+  ui.nextButton.disabled = true;
+  showFeedback(message);
   updateInfo();
 }
 
@@ -412,6 +460,7 @@ function resetGame() {
   state.answered = false;
   state.attemptsLeft = CONFIG.maxAttempts;
   ui.nextButton.disabled = true;
+
   renderMap();
   showFeedback('Hra byla resetována. Zvolte nové nastavení a spusťte hru.');
   updateInfo();
@@ -421,6 +470,7 @@ function markTargetCompleted(correct) {
   state.completedIds.add(state.currentTarget.id);
   state.answered = true;
   ui.nextButton.disabled = false;
+
   if (correct) {
     setTargetStatus(`Správně! ${state.currentTarget.name} je hotový.`, 'success');
   } else {
@@ -434,9 +484,7 @@ function styleLayer(layer, styleObject) {
 }
 
 function handleMapClick(target, layer) {
-  if (!state.currentTarget || state.answered) {
-    return;
-  }
+  if (!state.currentTarget || state.answered) return;
 
   if (target.id === state.currentTarget.id) {
     styleLayer(layer, styles.highlight);
@@ -467,22 +515,19 @@ function handleMapClick(target, layer) {
 }
 
 function findLayerByTargetId(targetId) {
-  if (!state.activeLayerGroup) return null;
-  let found = null;
-  state.activeLayerGroup.eachLayer((layer) => {
-    if (layer.targetId === targetId) {
-      found = layer;
-    }
-  });
-  return found;
+  return state.layerByTargetId[targetId] || null;
 }
 
 function blinkLayer(layer, count) {
   if (!layer) return;
+
   let step = 0;
+  const baseStyle = styles[state.currentLevel];
+
   const interval = setInterval(() => {
-    layer.setStyle(step % 2 === 0 ? styles.error : styles[state.currentLevel]);
+    layer.setStyle(step % 2 === 0 ? styles.error : baseStyle);
     step += 1;
+
     if (step >= count * 2) {
       clearInterval(interval);
       layer.setStyle(styles.error);
@@ -493,23 +538,28 @@ function blinkLayer(layer, count) {
 function attachUiEvents() {
   ui.scopeSelect.addEventListener('change', () => {
     updateScopeAndLevelOptions();
+    invalidateCurrentGame();
     renderMap();
   });
 
   ui.levelSelect.addEventListener('change', () => {
     state.currentLevel = ui.levelSelect.value;
     updateScopeAndLevelOptions();
+    invalidateCurrentGame();
     renderMap();
   });
 
   ui.krajSelect.addEventListener('change', () => {
     state.selectedKraj = ui.krajSelect.value;
+    state.selectedOkres = '';
     updateOkresOptions();
+    invalidateCurrentGame();
     renderMap();
   });
 
   ui.okresSelect.addEventListener('change', () => {
     state.selectedOkres = ui.okresSelect.value;
+    invalidateCurrentGame();
     renderMap();
   });
 
@@ -523,8 +573,8 @@ function attachUiEvents() {
 
 function initializeMap() {
   state.map = L.map('map', {
-    center: [49.8, 15.5],
-    zoom: 7,
+    center: CONFIG.defaultView.center,
+    zoom: CONFIG.defaultView.zoom,
     zoomControl: true,
     attributionControl: false
   });
@@ -558,10 +608,12 @@ function initializeApp() {
       loadGeoJsonFeatures('kraje', krajeGeo);
       loadGeoJsonFeatures('okresy', okresyGeo);
       loadGeoJsonFeatures('orp', orpGeo);
+
       updateKrajOptions();
       updateOkresOptions();
       updateScopeAndLevelOptions();
       renderMap();
+
       showFeedback('Data načtena. Zvolte nastavení a spusťte hru.');
     })
     .catch((error) => {
