@@ -1,0 +1,1760 @@
+{
+  "naz_stat": "Česká republika",
+  "kod_stat": "19",
+  "nuts0_stat": "CZ",
+  "counts": {
+    "kraje": 14,
+    "okresy": 77,
+    "orp": 206
+  },
+  "kraje": [
+    {
+      "naz_kraj": "Hlavní město Praha",
+      "kod_kraj": "3018",
+      "nuts3_kraj": "CZ010",
+      "counts": {
+        "okresy": 1,
+        "orp": 1
+      },
+      "okresy": [
+        {
+          "naz_okres": "Praha",
+          "kod_okres": "40924",
+          "lau1": "CZ0100",
+          "counts": {
+            "orp": 1
+          },
+          "orp": [
+            {
+              "naz_orp": "Praha",
+              "kod_orp": "1000"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "naz_kraj": "Středočeský kraj",
+      "kod_kraj": "3026",
+      "nuts3_kraj": "CZ020",
+      "counts": {
+        "okresy": 12,
+        "orp": 26
+      },
+      "okresy": [
+        {
+          "naz_okres": "Benešov",
+          "kod_okres": "40169",
+          "lau1": "CZ0201",
+          "counts": {
+            "orp": 3
+          },
+          "orp": [
+            {
+              "naz_orp": "Benešov",
+              "kod_orp": "2101"
+            },
+            {
+              "naz_orp": "Vlašim",
+              "kod_orp": "2125"
+            },
+            {
+              "naz_orp": "Votice",
+              "kod_orp": "2126"
+            }
+          ]
+        },
+        {
+          "naz_okres": "Beroun",
+          "kod_okres": "40177",
+          "lau1": "CZ0202",
+          "counts": {
+            "orp": 2
+          },
+          "orp": [
+            {
+              "naz_orp": "Beroun",
+              "kod_orp": "2102"
+            },
+            {
+              "naz_orp": "Hořovice",
+              "kod_orp": "2108"
+            }
+          ]
+        },
+        {
+          "naz_okres": "Kladno",
+          "kod_okres": "40185",
+          "lau1": "CZ0203",
+          "counts": {
+            "orp": 2
+          },
+          "orp": [
+            {
+              "naz_orp": "Kladno",
+              "kod_orp": "2109"
+            },
+            {
+              "naz_orp": "Slaný",
+              "kod_orp": "2124"
+            }
+          ]
+        },
+        {
+          "naz_okres": "Kolín",
+          "kod_okres": "40193",
+          "lau1": "CZ0204",
+          "counts": {
+            "orp": 2
+          },
+          "orp": [
+            {
+              "naz_orp": "Český Brod",
+              "kod_orp": "2106"
+            },
+            {
+              "naz_orp": "Kolín",
+              "kod_orp": "2110"
+            }
+          ]
+        },
+        {
+          "naz_okres": "Kutná Hora",
+          "kod_okres": "40207",
+          "lau1": "CZ0205",
+          "counts": {
+            "orp": 2
+          },
+          "orp": [
+            {
+              "naz_orp": "Čáslav",
+              "kod_orp": "2104"
+            },
+            {
+              "naz_orp": "Kutná Hora",
+              "kod_orp": "2112"
+            }
+          ]
+        },
+        {
+          "naz_okres": "Mladá Boleslav",
+          "kod_okres": "40223",
+          "lau1": "CZ0207",
+          "counts": {
+            "orp": 2
+          },
+          "orp": [
+            {
+              "naz_orp": "Mladá Boleslav",
+              "kod_orp": "2115"
+            },
+            {
+              "naz_orp": "Mnichovo Hradiště",
+              "kod_orp": "2116"
+            }
+          ]
+        },
+        {
+          "naz_okres": "Mělník",
+          "kod_okres": "40215",
+          "lau1": "CZ0206",
+          "counts": {
+            "orp": 3
+          },
+          "orp": [
+            {
+              "naz_orp": "Kralupy nad Vltavou",
+              "kod_orp": "2111"
+            },
+            {
+              "naz_orp": "Mělník",
+              "kod_orp": "2114"
+            },
+            {
+              "naz_orp": "Neratovice",
+              "kod_orp": "2117"
+            }
+          ]
+        },
+        {
+          "naz_okres": "Nymburk",
+          "kod_okres": "40231",
+          "lau1": "CZ0208",
+          "counts": {
+            "orp": 3
+          },
+          "orp": [
+            {
+              "naz_orp": "Lysá nad Labem",
+              "kod_orp": "2113"
+            },
+            {
+              "naz_orp": "Nymburk",
+              "kod_orp": "2118"
+            },
+            {
+              "naz_orp": "Poděbrady",
+              "kod_orp": "2119"
+            }
+          ]
+        },
+        {
+          "naz_okres": "Praha-východ",
+          "kod_okres": "40240",
+          "lau1": "CZ0209",
+          "counts": {
+            "orp": 2
+          },
+          "orp": [
+            {
+              "naz_orp": "Brandýs nad Labem-Stará Boleslav",
+              "kod_orp": "2103"
+            },
+            {
+              "naz_orp": "Říčany",
+              "kod_orp": "2122"
+            }
+          ]
+        },
+        {
+          "naz_okres": "Praha-západ",
+          "kod_okres": "40258",
+          "lau1": "CZ020A",
+          "counts": {
+            "orp": 1
+          },
+          "orp": [
+            {
+              "naz_orp": "Černošice",
+              "kod_orp": "2105"
+            }
+          ]
+        },
+        {
+          "naz_okres": "Příbram",
+          "kod_okres": "40266",
+          "lau1": "CZ020B",
+          "counts": {
+            "orp": 3
+          },
+          "orp": [
+            {
+              "naz_orp": "Dobříš",
+              "kod_orp": "2107"
+            },
+            {
+              "naz_orp": "Příbram",
+              "kod_orp": "2120"
+            },
+            {
+              "naz_orp": "Sedlčany",
+              "kod_orp": "2123"
+            }
+          ]
+        },
+        {
+          "naz_okres": "Rakovník",
+          "kod_okres": "40274",
+          "lau1": "CZ020C",
+          "counts": {
+            "orp": 1
+          },
+          "orp": [
+            {
+              "naz_orp": "Rakovník",
+              "kod_orp": "2121"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "naz_kraj": "Jihočeský kraj",
+      "kod_kraj": "3034",
+      "nuts3_kraj": "CZ031",
+      "counts": {
+        "okresy": 7,
+        "orp": 17
+      },
+      "okresy": [
+        {
+          "naz_okres": "České Budějovice",
+          "kod_okres": "40282",
+          "lau1": "CZ0311",
+          "counts": {
+            "orp": 3
+          },
+          "orp": [
+            {
+              "naz_orp": "České Budějovice",
+              "kod_orp": "3102"
+            },
+            {
+              "naz_orp": "Trhové Sviny",
+              "kod_orp": "3113"
+            },
+            {
+              "naz_orp": "Týn nad Vltavou",
+              "kod_orp": "3115"
+            }
+          ]
+        },
+        {
+          "naz_okres": "Český Krumlov",
+          "kod_okres": "40291",
+          "lau1": "CZ0312",
+          "counts": {
+            "orp": 2
+          },
+          "orp": [
+            {
+              "naz_orp": "Český Krumlov",
+              "kod_orp": "3103"
+            },
+            {
+              "naz_orp": "Kaplice",
+              "kod_orp": "3106"
+            }
+          ]
+        },
+        {
+          "naz_okres": "Jindřichův Hradec",
+          "kod_okres": "40304",
+          "lau1": "CZ0313",
+          "counts": {
+            "orp": 3
+          },
+          "orp": [
+            {
+              "naz_orp": "Dačice",
+              "kod_orp": "3104"
+            },
+            {
+              "naz_orp": "Jindřichův Hradec",
+              "kod_orp": "3105"
+            },
+            {
+              "naz_orp": "Třeboň",
+              "kod_orp": "3114"
+            }
+          ]
+        },
+        {
+          "naz_okres": "Písek",
+          "kod_okres": "40312",
+          "lau1": "CZ0314",
+          "counts": {
+            "orp": 2
+          },
+          "orp": [
+            {
+              "naz_orp": "Milevsko",
+              "kod_orp": "3107"
+            },
+            {
+              "naz_orp": "Písek",
+              "kod_orp": "3108"
+            }
+          ]
+        },
+        {
+          "naz_okres": "Prachatice",
+          "kod_okres": "40321",
+          "lau1": "CZ0315",
+          "counts": {
+            "orp": 2
+          },
+          "orp": [
+            {
+              "naz_orp": "Prachatice",
+              "kod_orp": "3109"
+            },
+            {
+              "naz_orp": "Vimperk",
+              "kod_orp": "3116"
+            }
+          ]
+        },
+        {
+          "naz_okres": "Strakonice",
+          "kod_okres": "40339",
+          "lau1": "CZ0316",
+          "counts": {
+            "orp": 3
+          },
+          "orp": [
+            {
+              "naz_orp": "Blatná",
+              "kod_orp": "3101"
+            },
+            {
+              "naz_orp": "Strakonice",
+              "kod_orp": "3111"
+            },
+            {
+              "naz_orp": "Vodňany",
+              "kod_orp": "3117"
+            }
+          ]
+        },
+        {
+          "naz_okres": "Tábor",
+          "kod_okres": "40347",
+          "lau1": "CZ0317",
+          "counts": {
+            "orp": 2
+          },
+          "orp": [
+            {
+              "naz_orp": "Soběslav",
+              "kod_orp": "3110"
+            },
+            {
+              "naz_orp": "Tábor",
+              "kod_orp": "3112"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "naz_kraj": "Plzeňský kraj",
+      "kod_kraj": "3042",
+      "nuts3_kraj": "CZ032",
+      "counts": {
+        "okresy": 7,
+        "orp": 15
+      },
+      "okresy": [
+        {
+          "naz_okres": "Domažlice",
+          "kod_okres": "40355",
+          "lau1": "CZ0321",
+          "counts": {
+            "orp": 2
+          },
+          "orp": [
+            {
+              "naz_orp": "Domažlice",
+              "kod_orp": "3202"
+            },
+            {
+              "naz_orp": "Horšovský Týn",
+              "kod_orp": "3204"
+            }
+          ]
+        },
+        {
+          "naz_okres": "Klatovy",
+          "kod_okres": "40363",
+          "lau1": "CZ0322",
+          "counts": {
+            "orp": 3
+          },
+          "orp": [
+            {
+              "naz_orp": "Horažďovice",
+              "kod_orp": "3203"
+            },
+            {
+              "naz_orp": "Klatovy",
+              "kod_orp": "3205"
+            },
+            {
+              "naz_orp": "Sušice",
+              "kod_orp": "3214"
+            }
+          ]
+        },
+        {
+          "naz_okres": "Plzeň-jih",
+          "kod_okres": "40380",
+          "lau1": "CZ0324",
+          "counts": {
+            "orp": 4
+          },
+          "orp": [
+            {
+              "naz_orp": "Blovice",
+              "kod_orp": "3201"
+            },
+            {
+              "naz_orp": "Nepomuk",
+              "kod_orp": "3207"
+            },
+            {
+              "naz_orp": "Přeštice",
+              "kod_orp": "3210"
+            },
+            {
+              "naz_orp": "Stod",
+              "kod_orp": "3212"
+            }
+          ]
+        },
+        {
+          "naz_okres": "Plzeň-město",
+          "kod_okres": "40371",
+          "lau1": "CZ0323",
+          "counts": {
+            "orp": 1
+          },
+          "orp": [
+            {
+              "naz_orp": "Plzeň",
+              "kod_orp": "3209"
+            }
+          ]
+        },
+        {
+          "naz_okres": "Plzeň-sever",
+          "kod_okres": "40398",
+          "lau1": "CZ0325",
+          "counts": {
+            "orp": 2
+          },
+          "orp": [
+            {
+              "naz_orp": "Kralovice",
+              "kod_orp": "3206"
+            },
+            {
+              "naz_orp": "Nýřany",
+              "kod_orp": "3208"
+            }
+          ]
+        },
+        {
+          "naz_okres": "Rokycany",
+          "kod_okres": "40401",
+          "lau1": "CZ0326",
+          "counts": {
+            "orp": 1
+          },
+          "orp": [
+            {
+              "naz_orp": "Rokycany",
+              "kod_orp": "3211"
+            }
+          ]
+        },
+        {
+          "naz_okres": "Tachov",
+          "kod_okres": "40410",
+          "lau1": "CZ0327",
+          "counts": {
+            "orp": 2
+          },
+          "orp": [
+            {
+              "naz_orp": "Stříbro",
+              "kod_orp": "3213"
+            },
+            {
+              "naz_orp": "Tachov",
+              "kod_orp": "3215"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "naz_kraj": "Karlovarský kraj",
+      "kod_kraj": "3051",
+      "nuts3_kraj": "CZ041",
+      "counts": {
+        "okresy": 3,
+        "orp": 7
+      },
+      "okresy": [
+        {
+          "naz_okres": "Cheb",
+          "kod_okres": "40428",
+          "lau1": "CZ0411",
+          "counts": {
+            "orp": 3
+          },
+          "orp": [
+            {
+              "naz_orp": "Aš",
+              "kod_orp": "4101"
+            },
+            {
+              "naz_orp": "Cheb",
+              "kod_orp": "4102"
+            },
+            {
+              "naz_orp": "Mariánské Lázně",
+              "kod_orp": "4105"
+            }
+          ]
+        },
+        {
+          "naz_okres": "Karlovy Vary",
+          "kod_okres": "40436",
+          "lau1": "CZ0412",
+          "counts": {
+            "orp": 2
+          },
+          "orp": [
+            {
+              "naz_orp": "Karlovy Vary",
+              "kod_orp": "4103"
+            },
+            {
+              "naz_orp": "Ostrov",
+              "kod_orp": "4106"
+            }
+          ]
+        },
+        {
+          "naz_okres": "Sokolov",
+          "kod_okres": "40444",
+          "lau1": "CZ0413",
+          "counts": {
+            "orp": 2
+          },
+          "orp": [
+            {
+              "naz_orp": "Kraslice",
+              "kod_orp": "4104"
+            },
+            {
+              "naz_orp": "Sokolov",
+              "kod_orp": "4107"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "naz_kraj": "Ústecký kraj",
+      "kod_kraj": "3069",
+      "nuts3_kraj": "CZ042",
+      "counts": {
+        "okresy": 7,
+        "orp": 16
+      },
+      "okresy": [
+        {
+          "naz_okres": "Děčín",
+          "kod_okres": "40452",
+          "lau1": "CZ0421",
+          "counts": {
+            "orp": 3
+          },
+          "orp": [
+            {
+              "naz_orp": "Děčín",
+              "kod_orp": "4202"
+            },
+            {
+              "naz_orp": "Rumburk",
+              "kod_orp": "4212"
+            },
+            {
+              "naz_orp": "Varnsdorf",
+              "kod_orp": "4215"
+            }
+          ]
+        },
+        {
+          "naz_okres": "Chomutov",
+          "kod_okres": "40461",
+          "lau1": "CZ0422",
+          "counts": {
+            "orp": 2
+          },
+          "orp": [
+            {
+              "naz_orp": "Chomutov",
+              "kod_orp": "4203"
+            },
+            {
+              "naz_orp": "Kadaň",
+              "kod_orp": "4204"
+            }
+          ]
+        },
+        {
+          "naz_okres": "Litoměřice",
+          "kod_okres": "40479",
+          "lau1": "CZ0423",
+          "counts": {
+            "orp": 3
+          },
+          "orp": [
+            {
+              "naz_orp": "Litoměřice",
+              "kod_orp": "4205"
+            },
+            {
+              "naz_orp": "Lovosice",
+              "kod_orp": "4208"
+            },
+            {
+              "naz_orp": "Roudnice nad Labem",
+              "kod_orp": "4211"
+            }
+          ]
+        },
+        {
+          "naz_okres": "Louny",
+          "kod_okres": "40487",
+          "lau1": "CZ0424",
+          "counts": {
+            "orp": 3
+          },
+          "orp": [
+            {
+              "naz_orp": "Louny",
+              "kod_orp": "4207"
+            },
+            {
+              "naz_orp": "Podbořany",
+              "kod_orp": "4210"
+            },
+            {
+              "naz_orp": "Žatec",
+              "kod_orp": "4216"
+            }
+          ]
+        },
+        {
+          "naz_okres": "Most",
+          "kod_okres": "40495",
+          "lau1": "CZ0425",
+          "counts": {
+            "orp": 2
+          },
+          "orp": [
+            {
+              "naz_orp": "Most",
+              "kod_orp": "4209"
+            },
+            {
+              "naz_orp": "Litvínov",
+              "kod_orp": "4206"
+            }
+          ]
+        },
+        {
+          "naz_okres": "Teplice",
+          "kod_okres": "40509",
+          "lau1": "CZ0426",
+          "counts": {
+            "orp": 2
+          },
+          "orp": [
+            {
+              "naz_orp": "Bílina",
+              "kod_orp": "4201"
+            },
+            {
+              "naz_orp": "Teplice",
+              "kod_orp": "4213"
+            }
+          ]
+        },
+        {
+          "naz_okres": "Ústí nad Labem",
+          "kod_okres": "40517",
+          "lau1": "CZ0427",
+          "counts": {
+            "orp": 1
+          },
+          "orp": [
+            {
+              "naz_orp": "Ústí nad Labem",
+              "kod_orp": "4214"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "naz_kraj": "Liberecký kraj",
+      "kod_kraj": "3077",
+      "nuts3_kraj": "CZ051",
+      "counts": {
+        "okresy": 4,
+        "orp": 10
+      },
+      "okresy": [
+        {
+          "naz_okres": "Česká Lípa",
+          "kod_okres": "40525",
+          "lau1": "CZ0511",
+          "counts": {
+            "orp": 2
+          },
+          "orp": [
+            {
+              "naz_orp": "Česká Lípa",
+              "kod_orp": "5101"
+            },
+            {
+              "naz_orp": "Nový Bor",
+              "kod_orp": "5106"
+            }
+          ]
+        },
+        {
+          "naz_okres": "Jablonec nad Nisou",
+          "kod_okres": "40533",
+          "lau1": "CZ0512",
+          "counts": {
+            "orp": 3
+          },
+          "orp": [
+            {
+              "naz_orp": "Jablonec nad Nisou",
+              "kod_orp": "5103"
+            },
+            {
+              "naz_orp": "Tanvald",
+              "kod_orp": "5108"
+            },
+            {
+              "naz_orp": "Železný Brod",
+              "kod_orp": "5110"
+            }
+          ]
+        },
+        {
+          "naz_okres": "Liberec",
+          "kod_okres": "40541",
+          "lau1": "CZ0513",
+          "counts": {
+            "orp": 2
+          },
+          "orp": [
+            {
+              "naz_orp": "Frýdlant",
+              "kod_orp": "5102"
+            },
+            {
+              "naz_orp": "Liberec",
+              "kod_orp": "5105"
+            }
+          ]
+        },
+        {
+          "naz_okres": "Semily",
+          "kod_okres": "40550",
+          "lau1": "CZ0514",
+          "counts": {
+            "orp": 3
+          },
+          "orp": [
+            {
+              "naz_orp": "Jilemnice",
+              "kod_orp": "5104"
+            },
+            {
+              "naz_orp": "Semily",
+              "kod_orp": "5107"
+            },
+            {
+              "naz_orp": "Turnov",
+              "kod_orp": "5109"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "naz_kraj": "Královéhradecký kraj",
+      "kod_kraj": "3085",
+      "nuts3_kraj": "CZ052",
+      "counts": {
+        "okresy": 5,
+        "orp": 15
+      },
+      "okresy": [
+        {
+          "naz_okres": "Hradec Králové",
+          "kod_okres": "40568",
+          "lau1": "CZ0521",
+          "counts": {
+            "orp": 2
+          },
+          "orp": [
+            {
+              "naz_orp": "Hradec Králové",
+              "kod_orp": "5205"
+            },
+            {
+              "naz_orp": "Nový Bydžov",
+              "kod_orp": "5212"
+            }
+          ]
+        },
+        {
+          "naz_okres": "Jičín",
+          "kod_okres": "40576",
+          "lau1": "CZ0522",
+          "counts": {
+            "orp": 3
+          },
+          "orp": [
+            {
+              "naz_orp": "Hořice",
+              "kod_orp": "5204"
+            },
+            {
+              "naz_orp": "Jičín",
+              "kod_orp": "5207"
+            },
+            {
+              "naz_orp": "Nová Paka",
+              "kod_orp": "5210"
+            }
+          ]
+        },
+        {
+          "naz_okres": "Náchod",
+          "kod_okres": "40584",
+          "lau1": "CZ0523",
+          "counts": {
+            "orp": 4
+          },
+          "orp": [
+            {
+              "naz_orp": "Broumov",
+              "kod_orp": "5201"
+            },
+            {
+              "naz_orp": "Jaroměř",
+              "kod_orp": "5206"
+            },
+            {
+              "naz_orp": "Náchod",
+              "kod_orp": "5209"
+            },
+            {
+              "naz_orp": "Nové Město nad Metují",
+              "kod_orp": "5211"
+            }
+          ]
+        },
+        {
+          "naz_okres": "Rychnov nad Kněžnou",
+          "kod_okres": "40592",
+          "lau1": "CZ0524",
+          "counts": {
+            "orp": 3
+          },
+          "orp": [
+            {
+              "naz_orp": "Dobruška",
+              "kod_orp": "5202"
+            },
+            {
+              "naz_orp": "Kostelec nad Orlicí",
+              "kod_orp": "5208"
+            },
+            {
+              "naz_orp": "Rychnov nad Kněžnou",
+              "kod_orp": "5213"
+            }
+          ]
+        },
+        {
+          "naz_okres": "Trutnov",
+          "kod_okres": "40606",
+          "lau1": "CZ0525",
+          "counts": {
+            "orp": 3
+          },
+          "orp": [
+            {
+              "naz_orp": "Dvůr Králové nad Labem",
+              "kod_orp": "5203"
+            },
+            {
+              "naz_orp": "Trutnov",
+              "kod_orp": "5214"
+            },
+            {
+              "naz_orp": "Vrchlabí",
+              "kod_orp": "5215"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "naz_kraj": "Pardubický kraj",
+      "kod_kraj": "3093",
+      "nuts3_kraj": "CZ053",
+      "counts": {
+        "okresy": 4,
+        "orp": 15
+      },
+      "okresy": [
+        {
+          "naz_okres": "Chrudim",
+          "kod_okres": "40614",
+          "lau1": "CZ0531",
+          "counts": {
+            "orp": 2
+          },
+          "orp": [
+            {
+              "naz_orp": "Chrudim",
+              "kod_orp": "5304"
+            },
+            {
+              "naz_orp": "Hlinsko",
+              "kod_orp": "5302"
+            }
+          ]
+        },
+        {
+          "naz_okres": "Pardubice",
+          "kod_okres": "40622",
+          "lau1": "CZ0532",
+          "counts": {
+            "orp": 3
+          },
+          "orp": [
+            {
+              "naz_orp": "Holice",
+              "kod_orp": "5303"
+            },
+            {
+              "naz_orp": "Pardubice",
+              "kod_orp": "5309"
+            },
+            {
+              "naz_orp": "Přelouč",
+              "kod_orp": "5311"
+            }
+          ]
+        },
+        {
+          "naz_okres": "Svitavy",
+          "kod_okres": "40631",
+          "lau1": "CZ0533",
+          "counts": {
+            "orp": 4
+          },
+          "orp": [
+            {
+              "naz_orp": "Litomyšl",
+              "kod_orp": "5307"
+            },
+            {
+              "naz_orp": "Moravská Třebová",
+              "kod_orp": "5308"
+            },
+            {
+              "naz_orp": "Polička",
+              "kod_orp": "5310"
+            },
+            {
+              "naz_orp": "Svitavy",
+              "kod_orp": "5312"
+            }
+          ]
+        },
+        {
+          "naz_okres": "Ústí nad Orlicí",
+          "kod_okres": "40649",
+          "lau1": "CZ0534",
+          "counts": {
+            "orp": 6
+          },
+          "orp": [
+            {
+              "naz_orp": "Česká Třebová",
+              "kod_orp": "5301"
+            },
+            {
+              "naz_orp": "Králíky",
+              "kod_orp": "5305"
+            },
+            {
+              "naz_orp": "Lanškroun",
+              "kod_orp": "5306"
+            },
+            {
+              "naz_orp": "Ústí nad Orlicí",
+              "kod_orp": "5313"
+            },
+            {
+              "naz_orp": "Vysoké Mýto",
+              "kod_orp": "5314"
+            },
+            {
+              "naz_orp": "Žamberk",
+              "kod_orp": "5315"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "naz_kraj": "Kraj Vysočina",
+      "kod_kraj": "3107",
+      "nuts3_kraj": "CZ063",
+      "counts": {
+        "okresy": 5,
+        "orp": 15
+      },
+      "okresy": [
+        {
+          "naz_okres": "Havlíčkův Brod",
+          "kod_okres": "40657",
+          "lau1": "CZ0631",
+          "counts": {
+            "orp": 3
+          },
+          "orp": [
+            {
+              "naz_orp": "Chotěboř",
+              "kod_orp": "6104"
+            },
+            {
+              "naz_orp": "Havlíčkův Brod",
+              "kod_orp": "6102"
+            },
+            {
+              "naz_orp": "Světlá nad Sázavou",
+              "kod_orp": "6111"
+            }
+          ]
+        },
+        {
+          "naz_okres": "Jihlava",
+          "kod_okres": "40665",
+          "lau1": "CZ0632",
+          "counts": {
+            "orp": 2
+          },
+          "orp": [
+            {
+              "naz_orp": "Jihlava",
+              "kod_orp": "6105"
+            },
+            {
+              "naz_orp": "Telč",
+              "kod_orp": "6112"
+            }
+          ]
+        },
+        {
+          "naz_okres": "Pelhřimov",
+          "kod_okres": "40673",
+          "lau1": "CZ0633",
+          "counts": {
+            "orp": 3
+          },
+          "orp": [
+            {
+              "naz_orp": "Humpolec",
+              "kod_orp": "6103"
+            },
+            {
+              "naz_orp": "Pacov",
+              "kod_orp": "6109"
+            },
+            {
+              "naz_orp": "Pelhřimov",
+              "kod_orp": "6110"
+            }
+          ]
+        },
+        {
+          "naz_okres": "Třebíč",
+          "kod_okres": "40681",
+          "lau1": "CZ0634",
+          "counts": {
+            "orp": 3
+          },
+          "orp": [
+            {
+              "naz_orp": "Moravské Budějovice",
+              "kod_orp": "6106"
+            },
+            {
+              "naz_orp": "Náměšť nad Oslavou",
+              "kod_orp": "6107"
+            },
+            {
+              "naz_orp": "Třebíč",
+              "kod_orp": "6113"
+            }
+          ]
+        },
+        {
+          "naz_okres": "Žďár nad Sázavou",
+          "kod_okres": "40690",
+          "lau1": "CZ0635",
+          "counts": {
+            "orp": 4
+          },
+          "orp": [
+            {
+              "naz_orp": "Bystřice nad Pernštejnem",
+              "kod_orp": "6101"
+            },
+            {
+              "naz_orp": "Nové Město na Moravě",
+              "kod_orp": "6108"
+            },
+            {
+              "naz_orp": "Velké Meziříčí",
+              "kod_orp": "6114"
+            },
+            {
+              "naz_orp": "Žďár nad Sázavou",
+              "kod_orp": "6115"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "naz_kraj": "Jihomoravský kraj",
+      "kod_kraj": "3115",
+      "nuts3_kraj": "CZ064",
+      "counts": {
+        "okresy": 7,
+        "orp": 21
+      },
+      "okresy": [
+        {
+          "naz_okres": "Blansko",
+          "kod_okres": "40703",
+          "lau1": "CZ0641",
+          "counts": {
+            "orp": 2
+          },
+          "orp": [
+            {
+              "naz_orp": "Blansko",
+              "kod_orp": "6201"
+            },
+            {
+              "naz_orp": "Boskovice",
+              "kod_orp": "6202"
+            }
+          ]
+        },
+        {
+          "naz_okres": "Brno-město",
+          "kod_okres": "40711",
+          "lau1": "CZ0642",
+          "counts": {
+            "orp": 1
+          },
+          "orp": [
+            {
+              "naz_orp": "Brno",
+              "kod_orp": "6203"
+            }
+          ]
+        },
+        {
+          "naz_okres": "Brno-venkov",
+          "kod_okres": "40720",
+          "lau1": "CZ0643",
+          "counts": {
+            "orp": 7
+          },
+          "orp": [
+            {
+              "naz_orp": "Ivančice",
+              "kod_orp": "6208"
+            },
+            {
+              "naz_orp": "Kuřim",
+              "kod_orp": "6209"
+            },
+            {
+              "naz_orp": "Pohořelice",
+              "kod_orp": "6213"
+            },
+            {
+              "naz_orp": "Rosice",
+              "kod_orp": "6214"
+            },
+            {
+              "naz_orp": "Šlapanice",
+              "kod_orp": "6216"
+            },
+            {
+              "naz_orp": "Tišnov",
+              "kod_orp": "6217"
+            },
+            {
+              "naz_orp": "Židlochovice",
+              "kod_orp": "6221"
+            }
+          ]
+        },
+        {
+          "naz_okres": "Břeclav",
+          "kod_okres": "40738",
+          "lau1": "CZ0644",
+          "counts": {
+            "orp": 3
+          },
+          "orp": [
+            {
+              "naz_orp": "Břeclav",
+              "kod_orp": "6204"
+            },
+            {
+              "naz_orp": "Hustopeče",
+              "kod_orp": "6207"
+            },
+            {
+              "naz_orp": "Mikulov",
+              "kod_orp": "6211"
+            }
+          ]
+        },
+        {
+          "naz_okres": "Hodonín",
+          "kod_okres": "40746",
+          "lau1": "CZ0645",
+          "counts": {
+            "orp": 3
+          },
+          "orp": [
+            {
+              "naz_orp": "Hodonín",
+              "kod_orp": "6206"
+            },
+            {
+              "naz_orp": "Kyjov",
+              "kod_orp": "6210"
+            },
+            {
+              "naz_orp": "Veselí nad Moravou",
+              "kod_orp": "6218"
+            }
+          ]
+        },
+        {
+          "naz_okres": "Vyškov",
+          "kod_okres": "40754",
+          "lau1": "CZ0646",
+          "counts": {
+            "orp": 3
+          },
+          "orp": [
+            {
+              "naz_orp": "Bučovice",
+              "kod_orp": "6205"
+            },
+            {
+              "naz_orp": "Slavkov u Brna",
+              "kod_orp": "6215"
+            },
+            {
+              "naz_orp": "Vyškov",
+              "kod_orp": "6219"
+            }
+          ]
+        },
+        {
+          "naz_okres": "Znojmo",
+          "kod_okres": "40762",
+          "lau1": "CZ0647",
+          "counts": {
+            "orp": 2
+          },
+          "orp": [
+            {
+              "naz_orp": "Moravský Krumlov",
+              "kod_orp": "6212"
+            },
+            {
+              "naz_orp": "Znojmo",
+              "kod_orp": "6220"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "naz_kraj": "Olomoucký kraj",
+      "kod_kraj": "3123",
+      "nuts3_kraj": "CZ071",
+      "counts": {
+        "okresy": 5,
+        "orp": 13
+      },
+      "okresy": [
+        {
+          "naz_okres": "Jeseník",
+          "kod_okres": "40771",
+          "lau1": "CZ0711",
+          "counts": {
+            "orp": 1
+          },
+          "orp": [
+            {
+              "naz_orp": "Jeseník",
+              "kod_orp": "7102"
+            }
+          ]
+        },
+        {
+          "naz_okres": "Olomouc",
+          "kod_okres": "40789",
+          "lau1": "CZ0712",
+          "counts": {
+            "orp": 4
+          },
+          "orp": [
+            {
+              "naz_orp": "Litovel",
+              "kod_orp": "7105"
+            },
+            {
+              "naz_orp": "Olomouc",
+              "kod_orp": "7107"
+            },
+            {
+              "naz_orp": "Šternberk",
+              "kod_orp": "7110"
+            },
+            {
+              "naz_orp": "Uničov",
+              "kod_orp": "7112"
+            }
+          ]
+        },
+        {
+          "naz_okres": "Prostějov",
+          "kod_okres": "40797",
+          "lau1": "CZ0713",
+          "counts": {
+            "orp": 2
+          },
+          "orp": [
+            {
+              "naz_orp": "Konice",
+              "kod_orp": "7103"
+            },
+            {
+              "naz_orp": "Prostějov",
+              "kod_orp": "7108"
+            }
+          ]
+        },
+        {
+          "naz_okres": "Přerov",
+          "kod_okres": "40801",
+          "lau1": "CZ0714",
+          "counts": {
+            "orp": 3
+          },
+          "orp": [
+            {
+              "naz_orp": "Hranice",
+              "kod_orp": "7101"
+            },
+            {
+              "naz_orp": "Lipník nad Bečvou",
+              "kod_orp": "7104"
+            },
+            {
+              "naz_orp": "Přerov",
+              "kod_orp": "7109"
+            }
+          ]
+        },
+        {
+          "naz_okres": "Šumperk",
+          "kod_okres": "40819",
+          "lau1": "CZ0715",
+          "counts": {
+            "orp": 3
+          },
+          "orp": [
+            {
+              "naz_orp": "Mohelnice",
+              "kod_orp": "7106"
+            },
+            {
+              "naz_orp": "Šumperk",
+              "kod_orp": "7111"
+            },
+            {
+              "naz_orp": "Zábřeh",
+              "kod_orp": "7113"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "naz_kraj": "Moravskoslezský kraj",
+      "kod_kraj": "3140",
+      "nuts3_kraj": "CZ080",
+      "counts": {
+        "okresy": 6,
+        "orp": 22
+      },
+      "okresy": [
+        {
+          "naz_okres": "Bruntál",
+          "kod_okres": "40860",
+          "lau1": "CZ0801",
+          "counts": {
+            "orp": 3
+          },
+          "orp": [
+            {
+              "naz_orp": "Bruntál",
+              "kod_orp": "8103"
+            },
+            {
+              "naz_orp": "Krnov",
+              "kod_orp": "8114"
+            },
+            {
+              "naz_orp": "Rýmařov",
+              "kod_orp": "8120"
+            }
+          ]
+        },
+        {
+          "naz_okres": "Frýdek-Místek",
+          "kod_okres": "40878",
+          "lau1": "CZ0802",
+          "counts": {
+            "orp": 4
+          },
+          "orp": [
+            {
+              "naz_orp": "Frýdek-Místek",
+              "kod_orp": "8106"
+            },
+            {
+              "naz_orp": "Frýdlant nad Ostravicí",
+              "kod_orp": "8107"
+            },
+            {
+              "naz_orp": "Jablunkov",
+              "kod_orp": "8110"
+            },
+            {
+              "naz_orp": "Třinec",
+              "kod_orp": "8121"
+            }
+          ]
+        },
+        {
+          "naz_okres": "Karviná",
+          "kod_okres": "40886",
+          "lau1": "CZ0803",
+          "counts": {
+            "orp": 5
+          },
+          "orp": [
+            {
+              "naz_orp": "Bohumín",
+              "kod_orp": "8102"
+            },
+            {
+              "naz_orp": "Český Těšín",
+              "kod_orp": "8104"
+            },
+            {
+              "naz_orp": "Havířov",
+              "kod_orp": "8108"
+            },
+            {
+              "naz_orp": "Karviná",
+              "kod_orp": "8111"
+            },
+            {
+              "naz_orp": "Orlová",
+              "kod_orp": "8118"
+            }
+          ]
+        },
+        {
+          "naz_okres": "Nový Jičín",
+          "kod_okres": "40894",
+          "lau1": "CZ0804",
+          "counts": {
+            "orp": 5
+          },
+          "orp": [
+            {
+              "naz_orp": "Bílovec",
+              "kod_orp": "8101"
+            },
+            {
+              "naz_orp": "Frenštát pod Radhoštěm",
+              "kod_orp": "8105"
+            },
+            {
+              "naz_orp": "Kopřivnice",
+              "kod_orp": "8112"
+            },
+            {
+              "naz_orp": "Nový Jičín",
+              "kod_orp": "8115"
+            },
+            {
+              "naz_orp": "Odry",
+              "kod_orp": "8116"
+            }
+          ]
+        },
+        {
+          "naz_okres": "Opava",
+          "kod_okres": "40908",
+          "lau1": "CZ0805",
+          "counts": {
+            "orp": 4
+          },
+          "orp": [
+            {
+              "naz_orp": "Hlučín",
+              "kod_orp": "8109"
+            },
+            {
+              "naz_orp": "Kravaře",
+              "kod_orp": "8113"
+            },
+            {
+              "naz_orp": "Opava",
+              "kod_orp": "8117"
+            },
+            {
+              "naz_orp": "Vítkov",
+              "kod_orp": "8122"
+            }
+          ]
+        },
+        {
+          "naz_okres": "Ostrava-město",
+          "kod_okres": "40916",
+          "lau1": "CZ0806",
+          "counts": {
+            "orp": 1
+          },
+          "orp": [
+            {
+              "naz_orp": "Ostrava",
+              "kod_orp": "8119"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "naz_kraj": "Zlínský kraj",
+      "kod_kraj": "3131",
+      "nuts3_kraj": "CZ072",
+      "counts": {
+        "okresy": 4,
+        "orp": 13
+      },
+      "okresy": [
+        {
+          "naz_okres": "Kroměříž",
+          "kod_okres": "40827",
+          "lau1": "CZ0721",
+          "counts": {
+            "orp": 3
+          },
+          "orp": [
+            {
+              "naz_orp": "Bystřice pod Hostýnem",
+              "kod_orp": "7201"
+            },
+            {
+              "naz_orp": "Holešov",
+              "kod_orp": "7202"
+            },
+            {
+              "naz_orp": "Kroměříž",
+              "kod_orp": "7203"
+            }
+          ]
+        },
+        {
+          "naz_okres": "Uherské Hradiště",
+          "kod_okres": "40835",
+          "lau1": "CZ0722",
+          "counts": {
+            "orp": 2
+          },
+          "orp": [
+            {
+              "naz_orp": "Uherský Brod",
+              "kod_orp": "7208"
+            },
+            {
+              "naz_orp": "Uherské Hradiště",
+              "kod_orp": "7207"
+            }
+          ]
+        },
+        {
+          "naz_okres": "Vsetín",
+          "kod_okres": "40843",
+          "lau1": "CZ0723",
+          "counts": {
+            "orp": 3
+          },
+          "orp": [
+            {
+              "naz_orp": "Rožnov pod Radhoštěm",
+              "kod_orp": "7206"
+            },
+            {
+              "naz_orp": "Valašské Meziříčí",
+              "kod_orp": "7210"
+            },
+            {
+              "naz_orp": "Vsetín",
+              "kod_orp": "7212"
+            }
+          ]
+        },
+        {
+          "naz_okres": "Zlín",
+          "kod_okres": "40851",
+          "lau1": "CZ0724",
+          "counts": {
+            "orp": 5
+          },
+          "orp": [
+            {
+              "naz_orp": "Luhačovice",
+              "kod_orp": "7204"
+            },
+            {
+              "naz_orp": "Otrokovice",
+              "kod_orp": "7205"
+            },
+            {
+              "naz_orp": "Valašské Klobouky",
+              "kod_orp": "7209"
+            },
+            {
+              "naz_orp": "Vizovice",
+              "kod_orp": "7211"
+            },
+            {
+              "naz_orp": "Zlín",
+              "kod_orp": "7213"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
